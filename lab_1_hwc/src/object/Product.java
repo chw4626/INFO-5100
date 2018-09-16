@@ -14,6 +14,30 @@ public class Product {
     private String price;
     private String num;
     private String descip;
+    private Supplier supplier;
+    
+    public Product(){
+        supplier = new Supplier();
+    }
+
+    public Supplier getSupplier() {
+        return supplier;
+    }
+    
+    //Supplier sup = new Supplier();
+    
+    /*public String getSuppliername(){
+        String supn = supplier.getSuppName();
+        return supn;
+    }
+    
+    public void setSuppliername(String supplername){
+        this.supplier.setSuppName(supplername);
+    }*/
+    
+    public void setSupplier(Supplier supplier) {
+        this.supplier = supplier;
+    }
 
     public String getName() {
         return name;

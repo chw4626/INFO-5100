@@ -9,7 +9,7 @@ import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import info.Person;
+import info.*;
 /**
  *
  * @author haowenchang
@@ -592,35 +592,54 @@ public class create extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       i.setFirstname(fnametxt.getText());
-       i.setLastname(lnametxt.getText());
-       i.setAge(agetxt.getText());
-       i.setAlergy1(al1.getText());
-       i.setAlergy2(al2.getText());
-       i.setAlergy3(al3.getText());
-       i.setBankaccount(acountntxt.getText());
-       i.setBankbalance(acountbtxt.getText());
-       i.setBankname(bankntxt.getText());
-       i.setBankrout(routntxt.getText());
-       i.setSbankaccount(sacountntxt.getText());
-       i.setSbankbalance(sacountbtxt.getText());
-       i.setSbankname(sbankntxt.getText());
-       i.setSbankrout(sroutntxt.getText());
-       i.setBloodtype(bloodttxt.getText());
-       i.setCity(citytxt.getText());
-       i.setDob(dobtxt.getText());
-       i.setExpiration(edtxt.getText());
-       i.setHeight(heighttxt.getText());
-       i.setIssue(idtxt.getText());
-       i.setLicensenum(lntxt.getText());
-       i.setMedicalnum(mrntxt.getText());
-       i.setPhone(phonetxt.getText());
-       i.setPic(pictxt.getText());
-       i.setSsn(ssntxt.getText());
-       i.setState(statetxt.getText());
-       i.setStreet(sttxt.getText());
-       i.setWeight(weighttxt.getText());
-       i.setZip(ziptxt.getText());
+       Demographic de = new Demographic();
+       de.setFirstname(fnametxt.getText());
+       de.setLastname(lnametxt.getText());
+       de.setAge(agetxt.getText());
+       de.setDob(dobtxt.getText());
+       de.setHeight(heighttxt.getText());
+       de.setWeight(weighttxt.getText());
+       de.setPhone(phonetxt.getText());
+       de.setSsn(ssntxt.getText());
+       i.setDemographic(de);
+       
+       Address ad = new Address();
+       ad.setCity(citytxt.getText());
+       ad.setState(statetxt.getText());
+       ad.setStreet(sttxt.getText());
+       ad.setZip(ziptxt.getText());
+       i.setAddress(ad);
+       
+       Checking ch = new Checking();
+       ch.setBankaccount(acountntxt.getText());
+       ch.setBankbalance(acountbtxt.getText());
+       ch.setBankname(bankntxt.getText());
+       ch.setBankrout(routntxt.getText());
+       i.setChecking(ch);
+       
+       Saving sa = new Saving();
+       sa.setSbankaccount(sacountntxt.getText());
+       sa.setSbankbalance(sacountbtxt.getText());
+       sa.setSbankname(sbankntxt.getText());
+       sa.setSbankrout(sroutntxt.getText());
+       i.setSaving(sa);
+       
+       Driver dr = new Driver();
+       dr.setBloodtype(bloodttxt.getText());
+       dr.setExpiration(edtxt.getText());
+       dr.setIssue(idtxt.getText());
+       dr.setLicensenum(lntxt.getText());
+       dr.setPic(pictxt.getText());
+       i.setDriver(dr);
+       
+       Medical me = new Medical();
+       me.setAlergy1(al1.getText());
+       me.setAlergy2(al2.getText());
+       me.setAlergy3(al3.getText());
+       me.setMedicalnum(mrntxt.getText());
+       i.setMedical(me);
+       
+
        JOptionPane.showMessageDialog(null, "Succuess");
        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

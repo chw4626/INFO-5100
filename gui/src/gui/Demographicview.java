@@ -19,14 +19,14 @@ public class Demographicview extends javax.swing.JPanel {
         initComponents();
         this.i = in;
         
-        fnamelb.setText(in.getFirstname());
-        lnamelb.setText(in.getLastname());
-        agelb.setText(in.getAge());
-        doblb.setText(in.getDob());
-        heightlb.setText(in.getHeight());
-        weightlb.setText(in.getWeight());
-        phonelb.setText(in.getPhone());
-        ssnlb.setText(in.getSsn());
+        fnamelb.setText(in.getDemographic().getFirstname());
+        lnamelb.setText(in.getDemographic().getLastname());
+        agelb.setText(in.getDemographic().getAge());
+        doblb.setText(in.getDemographic().getDob());
+        heightlb.setText(in.getDemographic().getHeight());
+        weightlb.setText(in.getDemographic().getWeight());
+        phonelb.setText(in.getDemographic().getPhone());
+        ssnlb.setText(in.getDemographic().getSsn());
     }
 
     /**

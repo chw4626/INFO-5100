@@ -18,10 +18,10 @@ public class Medicalview extends javax.swing.JPanel {
     public Medicalview(Person in) {
         initComponents();
         this.i = in;
-        mediciallb.setText(in.getMedicalnum());
-        a1lb.setText(in.getAlergy1());
-        a2lb.setText(in.getAlergy2());
-        a3lb.setText(in.getAlergy3());
+        mediciallb.setText(in.getMedical().getMedicalnum());
+        a1lb.setText(in.getMedical().getAlergy1());
+        a2lb.setText(in.getMedical().getAlergy2());
+        a3lb.setText(in.getMedical().getAlergy3());
         
     }
 

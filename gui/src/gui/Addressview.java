@@ -18,10 +18,10 @@ public class Addressview extends javax.swing.JPanel {
     public Addressview(Person in) {
         initComponents();
         this.i = in;
-        stalb.setText(in.getStreet());
-        statelb.setText(in.getState());
-        citylb.setText(in.getCity());
-        ziplb.setText(in.getZip());
+        stalb.setText(in.getAddress().getStreet());
+        statelb.setText(in.getAddress().getState());
+        citylb.setText(in.getAddress().getCity());
+        ziplb.setText(in.getAddress().getCity());
     }
 
     /**

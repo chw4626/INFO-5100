@@ -21,11 +21,11 @@ public class Driverview extends javax.swing.JPanel {
     public Driverview(Person in) {
         initComponents();
         this.i = in;
-        btypelb.setText(in.getBloodtype());
-        idlb.setText(in.getIssue());
-        edlb.setText(in.getExpiration());
-        lnumlb.setText(in.getLicensenum());
-        String path = in.getPic();
+        btypelb.setText(in.getDriver().getBloodtype());
+        idlb.setText(in.getDriver().getIssue());
+        edlb.setText(in.getDriver().getExpiration());
+        lnumlb.setText(in.getDriver().getLicensenum());
+        String path = in.getDriver().getPic();
         if(path != null){
            ImageIcon icon = new ImageIcon(path);
            icon.setImage(icon.getImage().getScaledInstance(175, 200, Image.SCALE_SMOOTH));

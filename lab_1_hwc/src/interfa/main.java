@@ -18,6 +18,7 @@ public class main extends javax.swing.JFrame {
     public main() {
         initComponents();
         product = new Product();
+        
     }
 
     /**
@@ -34,6 +35,7 @@ public class main extends javax.swing.JFrame {
         control = new javax.swing.JPanel();
         createb = new javax.swing.JButton();
         viewb = new javax.swing.JButton();
+        updateb = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,15 +68,23 @@ public class main extends javax.swing.JFrame {
             }
         });
 
+        updateb.setText("Update");
+        updateb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updatebActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlLayout = new javax.swing.GroupLayout(control);
         control.setLayout(controlLayout);
         controlLayout.setHorizontalGroup(
             controlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(controlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(controlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(createb, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(viewb))
+                    .addComponent(viewb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(updateb, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         controlLayout.setVerticalGroup(
@@ -84,7 +94,9 @@ public class main extends javax.swing.JFrame {
                 .addComponent(createb)
                 .addGap(37, 37, 37)
                 .addComponent(viewb)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addComponent(updateb)
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         split.setLeftComponent(control);
@@ -103,6 +115,11 @@ public class main extends javax.swing.JFrame {
         viewjp jp2 = new viewjp(product);
         split.setRightComponent(jp2);
     }//GEN-LAST:event_viewbActionPerformed
+
+    private void updatebActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatebActionPerformed
+        Updatepanel jp3 = new Updatepanel(product);
+        split.setRightComponent(jp3);
+    }//GEN-LAST:event_updatebActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,6 +161,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton createb;
     private javax.swing.JPanel disp;
     private javax.swing.JSplitPane split;
+    private javax.swing.JButton updateb;
     private javax.swing.JButton viewb;
     // End of variables declaration//GEN-END:variables
 }

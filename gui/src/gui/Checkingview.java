@@ -18,10 +18,10 @@ public class Checkingview extends javax.swing.JPanel {
     public Checkingview(Person in) {
         initComponents();
         this.i = in;
-        bnamelb.setText(in.getBankname());
-        rnumlb.setText(in.getBankrout());
-        anumlb.setText(in.getBankaccount());
-        abalalb.setText(in.getBankbalance());
+        bnamelb.setText(in.getChecking().getBankname());
+        rnumlb.setText(in.getChecking().getBankrout());
+        anumlb.setText(in.getChecking().getBankaccount());
+        abalalb.setText(in.getChecking().getBankbalance());
     }
 
     /**

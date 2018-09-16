@@ -18,10 +18,10 @@ public class Savingview extends javax.swing.JPanel {
     public Savingview(Person in) {
         initComponents();
         this.i = in;
-        sbnamelb.setText(in.getSbankname());
-        srnumlb.setText(in.getSbankrout());
-        sanumlb.setText(in.getSbankaccount());
-        sabalalb.setText(in.getSbankbalance());
+        sbnamelb.setText(in.getSaving().getSbankname());
+        srnumlb.setText(in.getSaving().getSbankrout());
+        sanumlb.setText(in.getSaving().getSbankaccount());
+        sabalalb.setText(in.getSaving().getSbankbalance());
     }
 
     /**

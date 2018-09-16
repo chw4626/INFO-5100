@@ -26,6 +26,7 @@ public class Person {
         Medical = new Medical();
     }
     
+    /*
     public String getFirstname() {
         return Demographic.getFirstname();
     }
@@ -159,10 +160,6 @@ public class Person {
         return Checking.getBanktype();
     }
 
-    /*public void setBanktype(String banktype) {
-        this.banktype = banktype;
-    }*/
-
     public String getLicensenum() {
         return Driver.getLicensenum();
     }
@@ -265,6 +262,54 @@ public class Person {
 
     public void setSbankbalance(String sbankbalance) {
         this.Saving.setSbankbalance(sbankbalance);
+    }*/
+
+    public Demographic getDemographic() {
+        return Demographic;
+    }
+
+    public void setDemographic(Demographic Demographic) {
+        this.Demographic = Demographic;
+    }
+
+    public Address getAddress() {
+        return Address;
+    }
+
+    public void setAddress(Address Address) {
+        this.Address = Address;
+    }
+
+    public Saving getSaving() {
+        return Saving;
+    }
+
+    public void setSaving(Saving Saving) {
+        this.Saving = Saving;
+    }
+
+    public Checking getChecking() {
+        return Checking;
+    }
+
+    public void setChecking(Checking Checking) {
+        this.Checking = Checking;
+    }
+
+    public Driver getDriver() {
+        return Driver;
+    }
+
+    public void setDriver(Driver Driver) {
+        this.Driver = Driver;
+    }
+
+    public Medical getMedical() {
+        return Medical;
+    }
+
+    public void setMedical(Medical Medical) {
+        this.Medical = Medical;
     }
     
 }
